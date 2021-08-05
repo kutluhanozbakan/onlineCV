@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContainerComponent } from './container/container.component';
 import { TruncatePipePipe } from './container/truncate-pipe.pipe';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TruncatePipePipe } from './container/truncate-pipe.pipe';
     AppComponent,
     NavbarComponent,
     ContainerComponent,
-    TruncatePipePipe
+    TruncatePipePipe,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
