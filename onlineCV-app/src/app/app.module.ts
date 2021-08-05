@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContainerComponent } from './container/container.component';
 import { TruncatePipePipe } from './container/truncate-pipe.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
