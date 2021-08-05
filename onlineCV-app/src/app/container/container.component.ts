@@ -12,7 +12,7 @@ import { egitimBilgileri } from './container';
 })
 export class ContainerComponent implements OnInit {
 
-  constructor(private alertifyService: AlertifyService) { }
+  constructor(private alertify: AlertifyService) { }
 
   egitimBilgileri: egitimBilgileri[] =
   [
@@ -25,5 +25,8 @@ export class ContainerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  addtoChart(egitimAdi: any)
+  {
+    this.alertify.success(egitimAdi.adi + " içerisine yönlendiriliceksiniz. Ama şimdi değil :)");
+  }
 }
