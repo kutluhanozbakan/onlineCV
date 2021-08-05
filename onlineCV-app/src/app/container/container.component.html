@@ -2,7 +2,7 @@
 
   <main class="container container-padding">
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-      <div class="col-md-6 px-0" >
+      <div class="col-md-6 px-0">
         <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
         <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
           about what’s most interesting in this post’s contents.</p>
@@ -11,27 +11,19 @@
     </div>
 
     <div class="row mb-2">
-      <div *ngFor="let egitim of egitimBilgileri" class="col-md-6" >
-        <div  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative " style="height: 400px;">
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">{{egitim.id}}</strong>
-            <h3 class="mb-0">{{egitim.adi}}</h3>
-            <div class="mb-1 text-muted">Nov 12</div>
-            <p class="card-text mb-auto">{{egitim.aciklama | truncatePipe}}</p>
-            <button (click)="addtoChart(egitim)" style="margin: 15px;" type="button" class="btn btn-primary"> Devamke </button>
-            <!-- <a (click)="addtoChart(egitim)" class="stretched-link">Continue reading</a> -->
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <img src="{{egitim.imageUrl}}" width="200" height="200">
-
-          </div>
+      <div *ngFor="let egitim of egitimBilgileri" class="col-md-6">
+        <div class="profile-card-2"><img src="{{egitim.imageUrl}}"
+            class="img img-responsive">
+          <div class="profile-name">{{egitim.adi}}</div>
+    
+          
         </div>
-      </div>
-      
+        
+    </div>
+
     </div>
 
     <!-- SS -->
-   
 
   </main>
 </body>
