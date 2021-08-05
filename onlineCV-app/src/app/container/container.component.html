@@ -1,6 +1,6 @@
 <body>
 
-  
+
   <main class="container container-padding">
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
       <div class="col-md-6 px-0">
@@ -12,13 +12,16 @@
     </div>
     <nav class="navbar navbar-light bg-light">
 
-  
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      
-    
+      <div class="form-group">
+
+
+
+        <input class="form-control" id="adi" placeholder="Arama metninizi giriniz." [(ngModel)]="filterText">
+      </div>
+
     </nav>
     <div class="row mb-2">
-      <div *ngFor="let egitim of egitimBilgileri" class="col-md-6">
+      <div *ngFor="let egitim of egitimBilgileri | egitimFilter:filterText" class="col-md-6">
         <div class="profile-card-2"><img src="{{egitim.imageUrl}}" class="img img-responsive">
           <!-- {{egitim.aciklama}} EKLENECEK DAHA SONRA  -->
           <div class="profile-name">{{egitim.adi}}</div>
