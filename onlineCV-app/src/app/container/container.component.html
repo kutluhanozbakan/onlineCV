@@ -12,14 +12,14 @@
 
     <div class="row mb-2">
       <div *ngFor="let egitim of egitimBilgileri" class="col-md-6">
-        <div class="profile-card-2"><img src="{{egitim.imageUrl}}"
-            class="img img-responsive">
+        <div class="profile-card-2"><img src="{{egitim.imageUrl}}" class="img img-responsive">
+          <!-- {{egitim.aciklama}} EKLENECEK DAHA SONRA  -->
           <div class="profile-name">{{egitim.adi}}</div>
-    
-          
+          <button (click)="addtoChart(egitim)" style="margin-left: 100px ; margin-top: 140px ;" type="button"
+            class="btn btn-primary btn-lg btn-block">İncele</button>
         </div>
-        
-    </div>
+
+      </div>
 
     </div>
 
