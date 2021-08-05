@@ -16,6 +16,7 @@ export class ContainerComponent implements OnInit {
   constructor(private alertify: AlertifyService,
               private http: HttpClient) { }
   path = "http://localhost:3000/egitimler"
+  filterText = "";
 
   egitimBilgileri: egitimBilgileri[] =
   [

@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContainerComponent } from './container/container.component';
 import { TruncatePipePipe } from './container/truncate-pipe.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { EgitimFilterPipe } from './container/egitim-filter.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     NavbarComponent,
     ContainerComponent,
     TruncatePipePipe,
-    SidebarComponent
+    SidebarComponent,
+    EgitimFilterPipe
   ],
   imports: [
     BrowserModule,
