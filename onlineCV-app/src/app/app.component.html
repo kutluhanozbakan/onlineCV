@@ -1,9 +1,37 @@
-<app-navbar></app-navbar>
+<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a [routerLink]="['/anasayfa']" routerLinkActive="router-link-active"  class="nav-link px-2 text-secondary">Anasayfa</a></li>
+          <li><a [routerLink]="['/hakkimda']" routerLinkActive="router-link-active"  class="nav-link px-2 text-white">Hakkımda</a></li>
+          <li><a [routerLink]="['/egitim-add-one']" routerLinkActive="router-link-active"  class="nav-link px-2 text-white">Yeni Egitim ekle</a></li>
+          <li><a [routerLink]="['/egitim-add-two']" routerLinkActive="router-link-active"  class="nav-link px-2 text-white">Yeni Egitim ekle2</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
 
 <div class="row">
     <div class="col-3">
         <app-sidebar></app-sidebar></div>
-    <div class="col-8"><app-container></app-container></div>
+    <div class="col-8"><router-outlet></router-outlet></div>
+
+    
     
   </div>
 
